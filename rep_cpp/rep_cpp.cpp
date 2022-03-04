@@ -1,4 +1,4 @@
-п»ї#include <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -26,20 +26,65 @@ void Insert(int*& arr, int element, int index, int *size)
 	*size += 1;
 }
 
-int main()
+template <typename T>
+void ShowArray(T *arr, int size, string name="")
 {
-	int size = 2;
-	int* pInt = new int[size];
-	*pInt = 0;
-	*(pInt + 1) = 1;
-	Insert(pInt, 5, size, &size);
+	cout << "Элементы массива " << name << ": ";
 	for (int i = 0; i < size; i++)
 	{
-		cout << pInt[i] << endl;
+		if (size - i != 1)
+		{
+			cout << arr[i] << ", ";
+		}
+		else
+		{
+			cout << arr[i] << endl;
+		}
 	}
-	
-	delete[] pInt;
 
-	system("pause");
+}
+void FillArray(char* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (i == 0)
+		{
+			arr[i] = 65 + rand() % 26;
+			continue;
+		}
+		if (size - i != 1)
+		{
+			arr[i] = 97 + rand() % 26;
+		}
+		else
+		{
+			arr[i] = '\0';
+		}
+	}
+}
+
+void FillArray(int* arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 100 + 1;
+	}
+}
+
+int main()
+{
+	system("chcp 1251");
+	srand(time(0));
+
+	const int rows = 3;
+	int cols = 7;
+	const char* arr[rows];
+	for (int i = 0; i < rows; i++)
+	{
+		arr[i] = "Pooooo";
+		cout << arr[i] << endl;
+	}
+
+	cin.get();
 	return 0;
 }
