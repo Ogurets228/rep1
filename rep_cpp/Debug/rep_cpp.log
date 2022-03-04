@@ -1,4 +1,5 @@
 ﻿  rep_cpp.cpp
-C:\500_my_projects\C++\rep_cpp\rep_cpp\rep_cpp.cpp(101,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\500_my_projects\C++\rep_cpp\rep_cpp\rep_cpp.cpp(109,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\500_my_projects\C++\rep_cpp\rep_cpp\rep_cpp.cpp(25,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\500_my_projects\C++\rep_cpp\rep_cpp\rep_cpp.cpp(33,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\500_my_projects\C++\rep_cpp\rep_cpp\rep_cpp.cpp(71,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   rep_cpp.vcxproj -> C:\500_my_projects\C++\rep_cpp\Debug\rep_cpp.exe
