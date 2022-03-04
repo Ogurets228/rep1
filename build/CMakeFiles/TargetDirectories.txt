@@ -1,3 +1,8 @@
 C:/500_my_projects/C++/rep2/build/CMakeFiles/rep2.dir
 C:/500_my_projects/C++/rep2/build/CMakeFiles/ALL_BUILD.dir
 C:/500_my_projects/C++/rep2/build/CMakeFiles/ZERO_CHECK.dir
+C:/500_my_projects/C++/rep2/build/external/glfw/CMakeFiles/ALL_BUILD.dir
+C:/500_my_projects/C++/rep2/build/external/glfw/src/CMakeFiles/glfw.dir
+C:/500_my_projects/C++/rep2/build/external/glfw/src/CMakeFiles/update_mappings.dir
+C:/500_my_projects/C++/rep2/build/external/glad/CMakeFiles/glad.dir
+C:/500_my_projects/C++/rep2/build/external/glad/CMakeFiles/ALL_BUILD.dir

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/rep2")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/GLFW")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -30,6 +30,13 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("C:/500_my_projects/C++/rep2/build/external/glfw/cmake_install.cmake")
+  include("C:/500_my_projects/C++/rep2/build/external/glad/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
