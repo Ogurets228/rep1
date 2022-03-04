@@ -9,68 +9,36 @@ string to_string(int n)
 	return buf;
 }
 
-template <typename T>
-void ShowArray(T arr[], int size)
+void Insert(int*& arr, int element, int index, int *size)
 {
-	cout << "arr's elements: ";
-	for (int i = 0; i < size; i++)
-	{
-		cout << arr[i] << ", ";
-	}
-	cout << endl;
-}
-
-void FillArray(int arr[], int size, int max = 10)
-{
-	srand(time(0));
-	for (int i = 0; i < size; i++)
-	{
-		*(arr + i) = rand() % max + 1;
-	}
-}
-void FillArray(string arr[], int size, int max = 10)
-{
-	srand(time(0));
-	for (int i = 0; i < size; i++)
-	{
-		arr[i] = "Element " + to_string(i);
-	}
-}
-void FillArray(char arr[], int size, int max = 10)
-{
-	cout << endl;
-	for (int i = 0; i < size; i++)
-	{
-		arr[i] = 97 + i;
-	}
-	cout << endl;
-}
-
-void AddElement(string*& arr, int &size, string element)
-{
-	string* new_arr = new string[size+1];
-	for (int i = 0; i < size; i++)
+	int* new_arr = new int[*size + 1];
+	for (int i = 0; i < index; i++)
 	{
 		new_arr[i] = arr[i];
 	}
-	new_arr[size] = element;
-
+	new_arr[index] = element;
+	for (int i = index+1; i < *size + 1; i++)
+	{
+		new_arr[i] = arr[i - 1];
+	}
 	delete[] arr;
 	arr = new_arr;
-	size += 1;
+	*size += 1;
 }
 
 int main()
 {
-	/*
-	char arr[5];
-	FillArray(arr, 5);
-	cout << arr << endl;
-	cout << arr[4] << endl;
-	*/
-	srand(time(0));
-	char arr[] = { 'g', 'o', 'o', 'g', '\0' };
-	cout << strlen(arr) << endl;
+	int size = 2;
+	int* pInt = new int[size];
+	*pInt = 0;
+	*(pInt + 1) = 1;
+	Insert(pInt, 5, size, &size);
+	for (int i = 0; i < size; i++)
+	{
+		cout << pInt[i] << endl;
+	}
+	
+	delete[] pInt;
 
 	system("pause");
 	return 0;
