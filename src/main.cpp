@@ -1,37 +1,59 @@
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
-int main(void)
+using namespace std;
+
+void glfwWindowSizeCallback(GLFWwindow *pWindow, int width, int height)
 {
-    GLFWwindow* window;
+	glViewport(0, 0, width, height);
+	cout << "Hi there\n";
+}
 
-    /* Initialize the library */
-    if (!glfwInit())
-        return -1;
+void glfwKeyCallback(GLFWwindow* pWindow, int key, int scancode, int act, int mode)
+{
+	if (key == GLFW_KEY_ESCAPE && act == GLFW_RELEASE)
+	{
+		glfwSetWindowShouldClose(pWindow, GL_TRUE);
+	}
+}
 
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
+int main()
+{
+	if (!glfwInit())
+	{
+		return -1;
+	}
+	GLFWwindow* pWindow = glfwCreateWindow(640, 480, "Test", nullptr, nullptr);
+	if (!pWindow)
+	{
+		return -1;
+		glfwTerminate();
+	}
 
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
+	glfwMakeContextCurrent(pWindow);
 
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(window))
-    {
-        /* Render here */
-        //glClear(GL_COLOR_BUFFER_BIT);
+	glfwSetWindowSizeCallback(pWindow, glfwWindowSizeCallback);
+	glfwSetKeyCallback(pWindow, glfwKeyCallback);
 
-        /* Swap front and back buffers */
-        glfwSwapBuffers(window);
 
-        /* Poll for and process events */
-        glfwPollEvents();
-    }
+	if (!gladLoadGL())
+	{
+		return -1;
+	}
+	cout << GLVersion.major << "." << GLVersion.minor << endl;
+	glClearColor(1, 0, 1, 1);
 
-    glfwTerminate();
-    return 0;
+	while (!glfwWindowShouldClose(pWindow))
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+		
+		glfwSwapBuffers(pWindow);
+
+		glfwPollEvents();
+	}
+
+
+	glfwTerminate();
+	return 0;
 }

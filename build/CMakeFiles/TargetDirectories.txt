@@ -1,0 +1,13 @@
+C:/500_my_projects/C++/rep3/build/CMakeFiles/rep3.dir
+C:/500_my_projects/C++/rep3/build/CMakeFiles/INSTALL.dir
+C:/500_my_projects/C++/rep3/build/CMakeFiles/ALL_BUILD.dir
+C:/500_my_projects/C++/rep3/build/CMakeFiles/ZERO_CHECK.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/CMakeFiles/uninstall.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/CMakeFiles/INSTALL.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/CMakeFiles/ALL_BUILD.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/src/CMakeFiles/glfw.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/src/CMakeFiles/update_mappings.dir
+C:/500_my_projects/C++/rep3/build/ext/glfw/src/CMakeFiles/INSTALL.dir
+C:/500_my_projects/C++/rep3/build/ext/glad/CMakeFiles/glad.dir
+C:/500_my_projects/C++/rep3/build/ext/glad/CMakeFiles/INSTALL.dir
+C:/500_my_projects/C++/rep3/build/ext/glad/CMakeFiles/ALL_BUILD.dir
