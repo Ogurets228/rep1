@@ -13,4 +13,9 @@
       <UniqueIdentifier>{B4932067-901D-318C-AB4E-CA5B09F05215}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="file.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
