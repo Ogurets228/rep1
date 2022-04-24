@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\500_my_projects\C++\rep3\src\main.cpp(74,26): warning C4305: аргумент: усечение из "double" в "GLfloat"
+﻿  ShaderProgram.cpp
   rep3.vcxproj -> C:\500_my_projects\C++\rep3\build\Debug\rep3.exe
